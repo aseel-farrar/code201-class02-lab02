@@ -9,3 +9,4 @@ I build this Guessing game to let the visitor know the website designer
 
 ## Author: Aseel Farrar
 
+[play](index.html)
