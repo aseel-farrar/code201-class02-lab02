@@ -18,7 +18,7 @@ h1{
     font-weight: bolder;
     text-transform:uppercase;
     font-style: oblique;
-    font-size: xx-large;
+    font-size: x-large;
     float: left;
 }
 
@@ -36,7 +36,7 @@ p{
 }
 
 .bio{
-    font-size:x-large;
+    font-size:large;
     padding: 20px;
     border-radius: 20px;
     font-weight: bolder;
