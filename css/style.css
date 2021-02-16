@@ -54,3 +54,24 @@ footer{
     align-items: center;
     justify-content: space-between;
 }
+
+section div{
+    display: inline-block;
+    text-align: center;
+    width: 100%;
+    margin: auto;
+
+
+}
+section.favorite div{
+    display: inline-block;
+    text-align: center;
+    width: 45%;
+
+}
+
+li:hover{
+    font-size:large;
+    font-weight: bolder;
+    background-color: rgb(30, 107, 81);
+}

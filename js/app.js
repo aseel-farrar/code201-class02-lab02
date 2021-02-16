@@ -4,13 +4,13 @@ let userName = prompt('Please enter your name');
 alert('Welcome to my site '+ userName +' and I am pleased because you visit my site and we going to play the guessing game together');
 
 
-//lab 03
+//>>>>>>>>>>> lab 03
 let attempt = 1;
 let attemptNum;
 let isValidAttempts= true;
 let mark = 0;
 
-// // 6th question: How much do I weigh?
+// 6th question: How much do I weigh?
 let weight;
 let myWeight = 46;
 attemptNum = 4;
@@ -28,73 +28,31 @@ do {
   }
 } while(isValidAttempts && Number(weight) !== myWeight);
 
-//7th question: Give me one of the prime factors of 210?
-// let primeFactors = [2, 3, 5, 7];
-// let userPrimeFactor;
-// let isArrayElement = false;
-// attemptNum = 6;
+// 7th question: Give me one of the prime factors of 210?
+let primeFactors = [2, 3, 5, 7];
+let userPrimeFactor;
+let isArrayElement = false;
+attemptNum = 6;
 
+while (isArrayElement === false && isValidAttempts === true) {
 
-// userPrimeFactor = prompt('Give me one of the prime factors of 210?');
-// isValidAttempts = attemptsCount();
+  userPrimeFactor = prompt('Give me one of the prime factors of 210?');
+  isValidAttempts = attemptsCount();
 
-// while () {
-//   for(let i = 0; i < 4; i++){
-//     if (userPrimeFactor === primeFactors[i]) {
-//       console.log('GOOD, Right Answer ...' + primeFactors);
-//       isArrayElement = true;
-//     }
-
-//     if (isArrayElement === true) {
-//       console.log(' yes it is array element i will break!!');
-//       break;
-//     }
-
-//   }
-//   console.log('test');
-// }
-
-
-////////////////////////////////////////////////////////////////////////////
-
-// function to ckech the number is it too high OR too low
-function numStatus(userInput, ans){
-  if (userInput < (ans - 5) && attempt !== 1)
-    return alert('Too Low');
-  else if (userInput > (ans + 5) && attempt !== 1)
-    return alert('Too High');
-  else if (attempt === 1){
-    alert('no more attempts for this question the Right answer is ---> ' + ans);
+  for(let i = 0; i < 4; i++){
+    if (Number(userPrimeFactor) === primeFactors[i]) {
+      isArrayElement = true;
+      console.log('Right Answer the prime factors of 210 are --->' + primeFactors);
+      mark++;
+      break;
+    }
+    else{
+      isArrayElement = false;
+    }
   }
 }
 
-// function to check if the user enter a number
-function isNumber(num){
-  if(isNaN(num)){
-    console.log(isNaN(num));
-    alert('Please enter a number');
-    return false;
-  }
-  else
-    return true;
-}
-
-//function to count is there more attempts
-function attemptsCount (){
-  if (attempt < attemptNum) {
-    attempt++;
-    return true;
-  }
-  else{
-    attempt = 1;
-    return false;
-  }
-}
-
-////////////////////////////////////////////////////////////////////////////
-
-
-// lab 02
+// >>>>>>>>>>>> lab 02
 
 //Do I have a university degree?
 let degree = prompt('Do I have a university degree?').toUpperCase();
@@ -211,4 +169,44 @@ case 'N':
   alert('NO wrong answer!! -_-\n I love volunteering especially with visual impairment people.');
   break;
 }
+
 alert('Good-bye '+ userName +' and  I wish you enjoyed playing the guessing game together ^_^ \n you got: ' + mark +' of 7');
+
+
+////////////////////////////////////////////////////////////////////////////
+
+// function to ckech the number is it too high OR too low
+function numStatus(userInput, ans){
+  if (userInput < (ans - 5) && attempt !== 1)
+    return alert('Too Low');
+  else if (userInput > (ans + 5) && attempt !== 1)
+    return alert('Too High');
+  else if (attempt === 1){
+    alert('no more attempts for this question the Right answer is ---> ' + ans);
+  }
+}
+
+// function to check if the user enter a number
+function isNumber(num){
+  if(isNaN(num)){
+    console.log(isNaN(num));
+    alert('Please enter a number');
+    return false;
+  }
+  else
+    return true;
+}
+
+//function to count is there more attempts
+function attemptsCount (){
+  if (attempt < attemptNum) {
+    attempt++;
+    return true;
+  }
+  else{
+    attempt = 1;
+    return false;
+  }
+}
+
+////////////////////////////////////////////////////////////////////////////
