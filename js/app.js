@@ -177,9 +177,9 @@ alert('Good-bye '+ userName +' and  I wish you enjoyed playing the guessing game
 
 // function to ckech the number is it too high OR too low
 function numStatus(userInput, ans){
-  if (userInput < (ans - 5) && attempt !== 1)
+  if (userInput < (ans) && attempt !== 1)
     return alert('Too Low');
-  else if (userInput > (ans + 5) && attempt !== 1)
+  else if (userInput > (ans) && attempt !== 1)
     return alert('Too High');
   else if (attempt === 1){
     alert('no more attempts for this question the Right answer is ---> ' + ans);
