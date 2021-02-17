@@ -213,9 +213,14 @@ function numStatus(userInput, ans) {
 }
 
 // function to check if the user enter a number
+<<<<<<< HEAD
+function isNumber(num){
+  if(isNaN(num)){
+=======
 function isNumber(num) {
   if (isNaN(num)) {
     console.log(isNaN(num));
+>>>>>>> cb8e3f4fb8add00e9115273246155f779da15f06
     alert('Please enter a number');
     return false;
   }
