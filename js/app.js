@@ -10,26 +10,6 @@ let attemptNum;
 let isValidAttempts = true;
 let mark = 0;
 
-// 6th question: How much do I weigh?
-sixthQuestion();
-function sixthQuestion() {
-  let weight;
-  let myWeight = 46;
-  attemptNum = 4;
-
-  do {
-    weight = prompt('How much do I weigh?');
-    isValidAttempts = attemptsCount();
-
-    if (isNumber(weight) && Number(weight) !== myWeight) {
-      console.log(numStatus(weight, myWeight));
-    }
-    else if (Number(weight) === myWeight) {
-      alert('Right Answer');
-      mark++;
-    }
-  } while (isValidAttempts && Number(weight) !== myWeight);
-}
 
 // 7th question: Give me one of the prime factors of 210?
 const seventhQuestion = function () {
@@ -57,6 +37,28 @@ const seventhQuestion = function () {
   }
 };
 seventhQuestion();
+
+// 6th question: How much do I weigh?
+sixthQuestion();
+function sixthQuestion() {
+  let weight;
+  let myWeight = 46;
+  attemptNum = 4;
+
+  do {
+    weight = prompt('How much do I weigh?');
+    isValidAttempts = attemptsCount();
+
+    if (isNumber(weight) && Number(weight) !== myWeight) {
+      console.log(numStatus(weight, myWeight));
+    }
+    else if (Number(weight) === myWeight) {
+      alert('Right Answer');
+      mark++;
+    }
+  } while (isValidAttempts && Number(weight) !== myWeight);
+}
+
 
 
 // >>>>>>>>>>>> lab 02
